@@ -1,62 +1,50 @@
 {
-    "author": "Tuan Anh Tran <me@tuananh.org> (https://tuananh.org)",
-    "dependencies": {
-        "bytes": "^3.1.0",
-        "compressible": "^2.0.17",
-        "iltorb": "^2.4.3",
-        "koa-is-json": "^1.0.0",
-        "statuses": "^1.5.0"
-    },
-    "description": "koa compression middleware",
-    "devDependencies": {
-        "istanbul": "0.4.5",
-        "koa": "2.7.0",
-        "mocha": "6.1.4",
-        "should": "13.2.3",
-        "should-http": "0.1.1",
-        "supertest": "4.0.2",
-        "eslint": "6.0.1",
-        "eslint-config-airbnb-base": "13.1.0",
-        "eslint-config-prettier": "6.0.0",
-        "eslint-plugin-import": "2.18.0",
-        "eslint-plugin-prettier": "3.1.0",
-        "husky": "2.7.0",
-        "lint-staged": "8.2.1",
-        "prettier": "1.18.2"
-    },
-    "files": [
-        "src/index.js",
-        "LICENSE"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/tuananh/kompression.git"
-    },
-    "homepage": "https://github.com/tuananh/kompression",
-    "bugs": "https://github.com/tuananh/kompression/issues",
-    "keywords": [
-        "koa",
-        "compression",
-        "middleware",
-        "brotli",
-        "gzip",
-        "inflate"
-    ],
-    "license": "MIT",
-    "lint-staged": {
-        "*src/*.js": [
-            "eslint --fix",
-            "git add"
-        ]
-    },
-    "main": "src/index.js",
-    "name": "kompression",
-    "scripts": {
-        "test": "mocha --require should --reporter spec --exit",
-        "test-cov": "node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require should",
-        "test-travis": "node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --require should",
-        "lint": "eslint --fix",
-        "precommit": "lint-staged"
-    },
-    "version": "1.0.1"
+  "name": "@nivinjoseph/kompression",
+  "version": "1.0.1",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha --require should --reporter spec --exit",
+    "test-cov": "node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require should",
+    "test-travis": "node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --require should",
+    "lint": "eslint --fix",
+    "publish-package": "npm version patch && git push && npm publish --access=public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nivinjoseph/kompression.git"
+  },
+  "author": "Tuan Anh Tran <me@tuananh.org> (https://tuananh.org)",
+  "dependencies": {
+    "bytes": "^3.1.0",
+    "compressible": "^2.0.17",
+    "iltorb": "^2.4.3",
+    "koa-is-json": "^1.0.0",
+    "statuses": "^1.5.0"
+  },
+  "description": "koa compression middleware",
+  "devDependencies": {
+    "istanbul": "0.4.5",
+    "koa": "2.7.0",
+    "mocha": "6.1.4",
+    "should": "13.2.3",
+    "should-http": "0.1.1",
+    "supertest": "4.0.2",
+    "eslint": "6.0.1",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-import": "2.18.0",
+    "eslint-plugin-prettier": "3.1.0",
+    "husky": "2.7.0",
+    "lint-staged": "8.2.1",
+    "prettier": "1.18.2"
+  },
+  "files": [
+    "src/index.js",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nivinjoseph/kompression/issues"
+  },
+  "homepage": "https://github.com/nivinjoseph/kompression#readme"
 }
